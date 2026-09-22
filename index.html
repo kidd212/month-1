@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Good luck</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="Container">
+      <!-- the beginning -->
+      <aside id="sidebar">
+        <div class="siderbar-H">
+          <h2>Business system</h2>
+        </div>
+        <nav class="Nav">
+          <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Suppliers</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">POS / Sales</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Expenses</a></li>
+            <li><a href="#">Sales Report</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </nav>
+        <div class="sidebar-f">
+          <a href="aboutus.html">About us</a>
+        </div>
+      </aside>
+
+      <!-- search bar/main content -->
+      <main id="main-content">
+        <!-- used form for search bar cause i was told its best practice dont use div -->
+        <!-- this header bar contains search and notifications -->
+        <header class="top-navbar">
+          <form class="Search-bar" role="search">
+            <span class="search-icon">🔍</span>
+            <input type="search" placeholder="search here" />
+          </form>
+
+          <div class="user-profile">
+            <span class="user-icon">👤</span>
+            <!-- why is span used here but the rest of the icons are divs -->
+            <span class="user-name">John Doe</span>
+          </div>
+        </header>
+
+        <!-- for the main content and card -->
+        <div id="dashboard-cards">
+          <!-- Total products -->
+          <div class="card">
+            <div class="card-info">
+              <span class="card-T">Total products</span>
+              <h3 class="card-value">6</h3>
+            </div>
+            <div class="card-icon-circle bg-blue">📦</div>
+          </div>
+
+          <!-- Todays sales -->
+          <div class="card">
+            <div class="card-info">
+              <span class="card-T">Todays sales</span>
+              <h3 class="card-value">6</h3>
+            </div>
+            <div class="card-icon-circle bg-green">🛒</div>
+            <!-- learn how to create this card icons -->
+          </div>
+
+          <!-- Monthly sales -->
+          <div class="card">
+            <div class="card-info">
+              <span class="card-T">Monthly sales</span>
+              <h3 class="card-value">6</h3>
+            </div>
+            <div class="card-icon-circle bg-orange">📈</div>
+          </div>
+
+          <!-- low stock -->
+          <div class="card">
+            <div class="card-info">
+              <span class="card-T">Low stock</span>
+              <h3 class="card-value">6</h3>
+            </div>
+            <div class="card-icon-circle bg-red">⚠️</div>
+          </div>
+
+          <!-- monthly exspenses -->
+          <div class="card">
+            <div class="card-info">
+              <span class="card-T">Monthly expenses</span>
+              <h3 class="card-value">6</h3>
+            </div>
+            <div class="card-icon-circle bg-orange">📄</div>
+          </div>
+
+          <!-- suppliers -->
+          <div class="card">
+            <div class="card-info">
+              <span class="card-T">Suppliers</span>
+              <h3 class="card-value">6</h3>
+            </div>
+            <div class="card-icon-circle bg-blue">🚚</div>
+          </div>
+
+          <!-- customers -->
+          <div class="card">
+            <div class="card-info">
+              <span class="card-T">Customers</span>
+              <h3 class="card-value">6</h3>
+            </div>
+            <div class="card-icon-circle bg-green">👥</div>
+          </div>
+        </div>
+        <!-- always remember to add a parent div for grid or flex things -->
+        <div id="p-charts">
+          <!-- left side MSO-->
+          <div class="chart-card">
+            <div class="chart-H">Monthly sales overview</div>
+          </div>
+
+          <!-- right side EB -->
+          <div class="chart-card">
+            <div class="chart-H">Expenses breakdown</div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
