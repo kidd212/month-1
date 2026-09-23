@@ -189,7 +189,56 @@ body {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-
   /* Even with 0 text inside, this height locks their shape on screen */
+  /* the height can be moved when there is something to put in the card */
   height: 380px;
+}
+
+#RS {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  margin: 20px;
+}
+
+.RS-head {
+  /* arrange horizontally */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+#Sales-table {
+  /* rules for table dont involve flex just width align the text change font-size if too big  */
+  width: 100%;
+  border-collapse: collapse; /* 🌟 THIS MUST BE ACTIVE FOR ROW BORDERS TO WORK why ?*/
+  text-align: left;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+#Sales-table thead tr {
+  background-color: #f8fafc; /* Light gray pill background for text labels */
+  color: #64748b; /* Soft slate gray label tone */
+}
+
+#Sales-table th {
+  font-weight: 600;
+}
+
+#Sales-table th,
+#Sales-table td {
+  padding: 16px 20px; /* Generous structural padding matching your sample asset */
+  vertical-align: middle;
+}
+#Sales-table td {
+  color: black;
+}
+#Sales-table tbody tr {
+  color: #334155;
+  /* Adds the clean gray bottom separation borders seen in your design target */
+  border-bottom: 1px solid #f1f5f9;
 }

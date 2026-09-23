@@ -15,16 +15,16 @@
         </div>
         <nav class="Nav">
           <ul>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Categories</a></li>
-            <li><a href="#">Suppliers</a></li>
-            <li><a href="#">Customers</a></li>
-            <li><a href="#">POS / Sales</a></li>
-            <li><a href="#">Inventory</a></li>
-            <li><a href="#">Expenses</a></li>
-            <li><a href="#">Sales Report</a></li>
-            <li><a href="#">Settings</a></li>
+            <li><a href="./index.html">Dashboard</a></li>
+            <li><a href="./products.html">Products</a></li>
+            <li><a href="./categories.html">Categories</a></li>
+            <li><a href="./suppliers.html">Suppliers</a></li>
+            <li><a href="./customers.html">Customers</a></li>
+            <li><a href="./pos-sales.html">POS / Sales</a></li>
+            <li><a href="./inventory.html">Inventory</a></li>
+            <li><a href="./expenses.html">Expenses</a></li>
+            <li><a href="./sales-report.html">Sales Report</a></li>
+            <li><a href="./settings.html">Settings</a></li>
           </ul>
         </nav>
         <div class="sidebar-f">
@@ -126,6 +126,62 @@
           <div class="chart-card">
             <div class="chart-H">Expenses breakdown</div>
           </div>
+        </div>
+
+        <div id="RS">
+          <div class="RS-head">
+            <div class="RS-H">
+              <h5>Recent sales</h5>
+            </div>
+            <div class="RS-B">
+              <button class="RS-btn">view all</button>
+            </div>
+          </div>
+
+          <table id="Sales-table">
+            <thead>
+              <tr>
+                <th>Invoice</th>
+                <th>Customer</th>
+                <th>Total</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+
+            <!-- Table Body: Spreadsheet Entries -->
+            <tbody>
+              <tr>
+                <td>INV-20260814-337</td>
+                <td>inyene edoho</td>
+                <td class="amount-cell">₦100,000.00</td>
+                <td>2026-08-14 09:56:11</td>
+              </tr>
+              <tr>
+                <td>INV-20260813-989</td>
+                <td>inyene edoho</td>
+                <td class="amount-cell">₦150,000.00</td>
+                <td>2026-08-13 08:27:40</td>
+              </tr>
+              <tr>
+                <td>INV-20260811-535</td>
+                <td>kennedy</td>
+                <td class="amount-cell">₦99,999,999.99</td>
+                <td>2026-08-11 22:22:40</td>
+              </tr>
+              <tr>
+                <td>INV-20260811-821</td>
+                <td>kennedy</td>
+                <td class="amount-cell">₦1,490,000.00</td>
+                <td>2026-08-11 22:08:34</td>
+              </tr>
+              <tr>
+                <td>INV-20260715-945</td>
+                <td>dan</td>
+                <td class="amount-cell">₦500,000.00</td>
+                <td>2026-07-15 09:18:59</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </main>
     </div>
