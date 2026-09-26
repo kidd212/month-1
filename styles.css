@@ -214,7 +214,7 @@ body {
 #Sales-table {
   /* rules for table dont involve flex just width align the text change font-size if too big  */
   width: 100%;
-  border-collapse: collapse; /* 🌟 THIS MUST BE ACTIVE FOR ROW BORDERS TO WORK why ?*/
+  border-collapse: collapse; /* 🌟 THIS MUST BE ACTIVE FOR ROW BORDERS TO WORK why ? */
   text-align: left;
   font-size: 0.9rem;
   margin-top: 20px;
@@ -241,4 +241,95 @@ body {
   color: #334155;
   /* Adds the clean gray bottom separation borders seen in your design target */
   border-bottom: 1px solid #f1f5f9;
+}
+
+main {
+  flex: 1; /* Forces the container to stretch and claim the remaining screen width */
+  display: flex;
+  flex-direction: column; /* Stacks your inner dashboard rows top-to-bottom */
+  background-color: #f1f5f9; /* The clean layout background color */
+  height: 100vh;
+  overflow-y: auto; /* Isolates scrolling to just this area */
+}
+
+#main-H {
+  padding: 20px;
+  background-color: #ffffff;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  justify-content: space-between; /* Pushes search to left, Admin to right */
+  align-items: center; /* Centers items vertically */
+}
+
+#P-table {
+  background-color: #ffffff;
+  /* CHANGE: Set  padding to 20px, but remove bottom (0) */
+  padding: 20px 20px 0 20px;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Ensures the sharp background corners don't poke past your 12px card curves */
+}
+
+.p-Tables {
+  width: 100%;
+  font-size: 0.9rem;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.p-Tables thead tr {
+  background-color: #f8fafc; /* This will now cleanly reach both edges of the card wrapper */
+}
+
+.p-Tables th {
+  padding: 18px 24px; /* Slightly increased to perfectly mirror your thick goal height width */
+  color: #475569;
+  font-weight: 600;
+  border-bottom: 10px solid #f1f5f9;
+}
+
+/* ADD THIS: Restores the internal margins for text column positioning now that outer card padding is gone */
+.p-Tables th:first-child {
+  padding-left: 24px; /* Keeps the "Image" label perfectly away from the raw left corner */
+}
+
+/* ==========================================
+   1. TABLET BREAKPOINT (Screens under 1024px)
+   ========================================== */
+@media screen and (max-width: 1024px) {
+  /* Your tablet layout overrides go here */
+
+  #p-charts {
+    grid-template-columns: 1fr; /* Changes charts from 2 columns side-by-side to stacking top-to-bottom */
+  }
+}
+
+/* ==========================================
+   2. MOBILE PHONE BREAKPOINT (Screens under 768px)
+   ========================================== */
+@media screen and (max-width: 768px) {
+  /* Your phone layout overrides go here */
+
+  #Container {
+    flex-direction: column; /* Stacks the sidebar on top of the main content instead of side-by-side */
+  }
+
+  #sidebar {
+    width: 100%; /* Forces the sidebar to take up full width on phones */
+    height: auto; /* Lets it match its content height instead of taking full screen height */
+  }
+
+  /* Changes your 4-column metric cards into 1 column so they don't squish */
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Makes table scroll horizontally if text spills off the phone screen edge */
+  #RS {
+    overflow-x: auto;
+  }
 }
