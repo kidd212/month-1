@@ -289,47 +289,68 @@ main {
   padding: 18px 24px; /* Slightly increased to perfectly mirror your thick goal height width */
   color: #475569;
   font-weight: 600;
-  border-bottom: 10px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
 }
 
 /* ADD THIS: Restores the internal margins for text column positioning now that outer card padding is gone */
 .p-Tables th:first-child {
-  padding-left: 24px; /* Keeps the "Image" label perfectly away from the raw left corner */
+  padding-left: 24px; /*Keeps the "Image" label perfectly away from the raw left corner */
+}
+
+.p-Tables tbody td {
+  /* margin: 20px; */
+  padding: 24px 20px;
+  border-bottom: 1px solid #f1f5f9;
 }
 
 /* ==========================================
    1. TABLET BREAKPOINT (Screens under 1024px)
    ========================================== */
+/* TABLET SCALE OVERRIDES */
 @media screen and (max-width: 1024px) {
-  /* Your tablet layout overrides go here */
-
   #p-charts {
-    grid-template-columns: 1fr; /* Changes charts from 2 columns side-by-side to stacking top-to-bottom */
+    grid-template-columns: 1fr;
+  }
+  #dashboard-cards {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 4 columns drop to 2 columns on tablet */
   }
 }
 
-/* ==========================================
-   2. MOBILE PHONE BREAKPOINT (Screens under 768px)
-   ========================================== */
+/* SMARTPHONE DEVICE OVERRIDES */
 @media screen and (max-width: 768px) {
-  /* Your phone layout overrides go here */
-
   #Container {
-    flex-direction: column; /* Stacks the sidebar on top of the main content instead of side-by-side */
+    flex-direction: column;
+    height: auto; /* Unlocks desktop height restrictions */
+    overflow: auto; /* Lets whole page scroll down on a tiny screen */
   }
 
   #sidebar {
-    width: 100%; /* Forces the sidebar to take up full width on phones */
-    height: auto; /* Lets it match its content height instead of taking full screen height */
+    width: 100%;
+    height: auto;
   }
 
-  /* Changes your 4-column metric cards into 1 column so they don't squish */
-  .dashboard-cards {
-    grid-template-columns: 1fr;
+  main,
+  #main-content {
+    height: auto;
+    overflow: visible; /* Prevents double scrollbar scroll lockboxes */
   }
 
-  /* Makes table scroll horizontally if text spills off the phone screen edge */
-  #RS {
-    overflow-x: auto;
+  #dashboard-cards {
+    grid-template-columns: 1fr; /* All cards stack vertically in 1 column */
+  }
+
+  #RS,
+  #P-table {
+    overflow-x: auto; /* Lets large wide tables slide horizontally if they spill off screen */
+  }
+
+  .top-navbar,
+  #main-H {
+    flex-direction: column; /* Stacks header components vertical if they bunch up */
+    gap: 15px;
+    align-items: flex-start;
   }
 }
