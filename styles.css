@@ -211,6 +211,14 @@ body {
   border-bottom: 1px solid #f1f5f9;
 }
 
+.RS-btn {
+  background-color: #1a3d7c;
+  border: none;
+  padding: 7px;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
 #Sales-table {
   /* rules for table dont involve flex just width align the text change font-size if too big  */
   width: 100%;
@@ -303,6 +311,165 @@ main {
   border-bottom: 1px solid #f1f5f9;
 }
 
+.badge.badge-active {
+  background-color: #28a745;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.add-product {
+  background-color: #1a3d7c;
+  border: none;
+  padding: 7px;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.btn-edit {
+  background-color: #f39c12;
+  border: none;
+  padding: 12px;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.btn-delete {
+  background-color: #e74c3c;
+  border: none;
+  padding: 12px;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.Cat-head {
+  padding: 20px;
+  background-color: #ffffff;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cat-Table {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Ensures the sharp background corners don't poke past your 12px card curves */
+}
+
+.cat-Table table {
+  width: 100%;
+  border-collapse: collapse; /*Essential to allow neat borders and flat banners */
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.cat-Table thead tr {
+  background-color: #f8fafc;
+}
+
+.cat-Table th,
+.cat-Table td {
+  padding: 16px 24px; /* 16px top/bottom pushes rows apart; 24px keeps columns spaced */
+  vertical-align: middle; /*Centers text and layout buttons vertically */
+  border-bottom: 1px solid #f8fafc; /* Subtle row separator line */
+}
+
+.cat-Table th {
+  color: #64748b; /* Slate gray text for headers */
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/*BUTTON DESIGN ENGINES (Colors extracted from your goal image) */
+
+/* Global button cleanup rule */
+.Cat-head button,
+.cat-Table button {
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: opacity 0.2s ease;
+}
+
+.Cat-head button:hover,
+.cat-Table button:hover {
+  opacity: 0.9; /* Subtle overlay fade animation when mouse hovers over buttons */
+}
+
+/* Add Category Button (Top Navbar Blue) */
+.Cat-head button {
+  background-color: #1a428a; /* Deep blue matching your brand identity */
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+/* Action cells containing side-by-side buttons */
+.cat-Table td:last-child {
+  display: flex;
+  gap: 8px; /* Puts clean breathing room between Edit and Delete buttons */
+}
+
+/* Edit Button Styling (Warm Orange) */
+.cat-Table button:first-child {
+  background-color: #f59e0b;
+  color: #ffffff;
+  padding: 8px 13px;
+  font-size: 0.85rem;
+}
+
+/* Delete Button Styling (Coral Red) */
+.cat-Table button:last-child {
+  background-color: #ef4444;
+  color: #ffffff;
+  padding: 8px 13px;
+  font-size: 0.85rem;
+}
+
+.S-head {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.s-Table {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.s-Table table {
+  width: 100%;
+  border-collapse: collapse; /*Essential to allow neat borders and flat banners */
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.s-Table thead tr {
+  background-color: #f8fafc;
+}
+
+.s-Table th,
+.s-Table td {
+  padding: 16px 20px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f8fafc;
+}
+
 /* ==========================================
    1. TABLET BREAKPOINT (Screens under 1024px)
    ========================================== */
@@ -320,6 +487,7 @@ main {
 }
 
 /* SMARTPHONE DEVICE OVERRIDES */
+/* gain a better understanding on media query */
 @media screen and (max-width: 768px) {
   #Container {
     flex-direction: column;
