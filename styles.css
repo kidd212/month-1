@@ -455,7 +455,8 @@ main {
 .s-Table table {
   width: 100%;
   border-collapse: collapse; /*Essential to allow neat borders and flat banners */
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  font-weight: 0.35rem;
   text-align: left;
 }
 
@@ -465,6 +466,81 @@ main {
 
 .s-Table th,
 .s-Table td {
+  padding: 16px 20px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f8fafc;
+}
+
+.S-head button,
+.s-Table button {
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: opacity 0.2s ease;
+}
+
+.S-head button {
+  background-color: #1a428a; /* Deep blue matching your brand identity */
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+.s-Table td:last-child {
+  display: flex;
+  gap: 8px; /* Puts clean breathing room between Edit and Delete buttons */
+}
+
+/*  Button Styling (Warm Orange) */
+.s-Table button:first-child {
+  background-color: #f59e0b;
+  color: #ffffff;
+  padding: 8px 13px;
+  font-size: 0.85rem;
+}
+
+/* Delete Button Styling (Coral Red) */
+.s-Table button:last-child {
+  background-color: #ef4444;
+  color: #ffffff;
+  padding: 8px 13px;
+  font-size: 0.85rem;
+}
+
+.customer-head {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-Table {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.c-Table table {
+  width: 100%;
+  border-collapse: collapse; /*Essential to allow neat borders and flat banners */
+  font-size: 0.85rem;
+  font-weight: 0.35rem;
+  text-align: left;
+}
+
+.c-Table thead tr {
+  background-color: #f8fafc;
+}
+
+.c-Table th,
+.c-Table td {
   padding: 16px 20px;
   vertical-align: middle;
   border-bottom: 1px solid #f8fafc;
