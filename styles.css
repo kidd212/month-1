@@ -546,6 +546,187 @@ main {
   border-bottom: 1px solid #f8fafc;
 }
 
+.customer-head button,
+.c-Table button {
+  border: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.customer-head button {
+  background-color: #1a428a;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.pos-head {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+
+  display: flex;
+}
+
+.selection-row {
+  display: flex;
+  gap: 20px;
+  padding: 2px 20px 20px 2px;
+  width: 100%;
+  /* align-items: center; */
+}
+
+.select-container {
+  flex: 1;
+}
+
+.dropdown-bar {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  color: #334155;
+  outline: none;
+  cursor: pointer;
+}
+
+.sradd {
+  flex-shrink: 0; /*what is this for*/
+}
+
+.sradd button {
+  background-color: #1a428a; /* Deep blue matching your dashboard theme */
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sradd button:hover {
+  background-color: #13326b;
+}
+
+.POS table {
+  width: 100%;
+  border-collapse: collapse; /* Essential: merges cell border lines so backgrounds sit perfectly flat */
+  text-align: left;
+}
+
+.pos-container {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.POS thead tr {
+  background-color: #f8fafc;
+  border-bottom: 1px solid #eeee;
+}
+
+.POS thead th {
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+.checkout-card {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+}
+
+.Checkout-Summary {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /*find it what it does */
+  gap: 12px; /* Adds clean vertical breathing space between text rows */
+  width: 350px;
+}
+
+.I-body {
+  display: grid;
+  /* Defines two vertical columns: each takes up an equal fraction (1fr) of width */
+  grid-template-columns: 1fr 1fr;
+  /* Creates space between the two columns */
+  gap: 20px;
+  /* Gives padding around the boxes inside the main workspace */
+  padding: 10px;
+}
+
+.I-head {
+  margin: 20px;
+  margin-bottom: 5px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.I-table,
+.I-table2 {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  min-height: 300px; /* Gives them a baseline structure before you add text/tables */
+}
+
+.I-table h4,
+.I-table2 h4 {
+  border-bottom: 1px solid #f1f5f9; /* Adds a clean horizontal line to separate the header from the content */
+  padding: 10px;
+  padding-bottom: 5px; /* Adds breathing room below the header text */
+}
+
+.I-table thead th {
+  padding: 10px;
+  background-color: #f8fafc; /* Light gray pill background for text labels */
+  font-size: 0.9rem;
+  color: #64748b; /* Soft slate gray label tone */
+  font-weight: 600;
+
+  padding: 12px 16px; /* Adds breathing room inside the header cells */
+  text-align: left; /* Aligns header text to the left for a clean look */
+  border-bottom: 1px solid #f1f5f9; /* Subtle row separator line */
+}
+
+.I-table table {
+  width: 100%;
+  border-collapse: collapse; /* Allows spacing between cells */
+  border-spacing: 0; /* Acts like a grid gap for your table cells */
+  margin-top: 20px; /* Adds breathing room between the header and the table content */
+}
+
+.I-table tbody td {
+  padding: 16px 16px; /* Adds breathing room inside the table cells */
+  border-bottom: 1px solid #f1f5f9; /* Subtle row separator line */
+
+  font-size: 0.8rem; /* Slightly smaller font for table content */
+}
+
+.status-low {
+  background-color: #dc3545;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 /* ==========================================
    1. TABLET BREAKPOINT (Screens under 1024px)
    ========================================== */
