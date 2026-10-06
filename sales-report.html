@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Good luck</title>
+    <title>Sales Report - Business System</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div id="Container">
-      <!-- the beginning -->
+      <!-- Sidebar Area -->
       <aside id="sidebar">
         <div class="siderbar-H">
           <h2>Business system</h2>
@@ -23,7 +23,9 @@
             <li><a href="./possales.html">POS / Sales</a></li>
             <li><a href="./inventory.html">Inventory</a></li>
             <li><a href="./exspenses.html">Expenses</a></li>
-            <li><a href="./sales-report.html">Sales Report</a></li>
+            <li>
+              <a href="./sales-report.html" class="active">Sales Report</a>
+            </li>
             <li><a href="./settings.html">Settings</a></li>
           </ul>
         </nav>
@@ -31,6 +33,142 @@
           <a href="aboutus.html">About us</a>
         </div>
       </aside>
+
+      <!-- Main Workspace Section -->
+      <main id="main-content">
+        <!-- 1. Header Bar Row -->
+        <div id="main-H">
+          <h3>Sales Report</h3>
+        </div>
+
+        <!-- 2. Date Parameters Selection Filter Panel -->
+        <div class="report-filter-card">
+          <form class="filter-form">
+            <div class="filter-group">
+              <label for="start-date">Start Date</label>
+              <input type="text" id="start-date" value="10/01/2026" />
+            </div>
+            <div class="filter-group">
+              <label for="end-date">End Date</label>
+              <input type="text" id="end-date" value="10/06/2026" />
+            </div>
+            <button type="submit" class="btn-generate">Generate Report</button>
+          </form>
+        </div>
+
+        <!-- 3. Metrics Summary Columns Grid Container -->
+        <div class="metrics-grid">
+          <!-- Total Sales -->
+          <div class="metric-card">
+            <div class="metric-info">
+              <span class="metric-title">Total Sales</span>
+              <span class="metric-value">₦0.00</span>
+            </div>
+            <div class="metric-icon-circle icon-blue">
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M3 3v18h18M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Total Expenses -->
+          <div class="metric-card">
+            <div class="metric-info">
+              <span class="metric-title">Total Expenses</span>
+              <span class="metric-value">₦0.00</span>
+            </div>
+            <div class="metric-icon-circle icon-orange">
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <line x1="9" y1="9" x2="15" y2="9" />
+                <line x1="9" y1="13" x2="15" y2="13" />
+                <line x1="9" y1="17" x2="15" y2="17" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Estimated Profit -->
+          <div class="metric-card">
+            <div class="metric-info">
+              <span class="metric-title">Estimated Profit</span>
+              <span class="metric-value">₦0.00</span>
+            </div>
+            <div class="metric-icon-circle icon-green">
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                <path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Sales Overview Table Section Panel Wrapper -->
+        <div class="report-table-section">
+          <h4>Sales (2026-10-01 to 2026-10-06)</h4>
+          <table class="report-data-table">
+            <thead>
+              <tr>
+                <th>Invoice No</th>
+                <th>Customer</th>
+                <th>Payment</th>
+                <th>Date</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="5" class="empty-state-cell">
+                  No sales recorded in this period.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 5. Expenses Overview Table Section Panel Wrapper -->
+        <div class="report-table-section">
+          <h4>Expenses (2026-10-01 to 2026-10-06)</h4>
+          <table class="report-data-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="4" class="empty-state-cell">
+                  No expenses recorded in this period.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
     </div>
   </body>
 </html>

@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Good luck</title>
+    <title>Business Settings - Business System</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div id="Container">
-      <!-- the beginning -->
+      <!-- Sidebar Area -->
       <aside id="sidebar">
         <div class="siderbar-H">
           <h2>Business system</h2>
@@ -24,13 +24,91 @@
             <li><a href="./inventory.html">Inventory</a></li>
             <li><a href="./exspenses.html">Expenses</a></li>
             <li><a href="./sales-report.html">Sales Report</a></li>
-            <li><a href="./settings.html">Settings</a></li>
+            <li><a href="./settings.html" class="active">Settings</a></li>
           </ul>
         </nav>
         <div class="sidebar-f">
           <a href="aboutus.html">About us</a>
         </div>
       </aside>
+
+      <!-- Main Workspace Section -->
+      <main id="main-content">
+        <!-- 1. Header Bar Row -->
+        <div id="main-H">
+          <h3>Business Settings</h3>
+        </div>
+
+        <!-- 2. Settings Panel Form Card Wrapper -->
+        <div class="settings-card">
+          <form class="settings-form">
+            <!-- Logo Upload Row Component -->
+            <div class="logo-upload-section">
+              <div class="logo-preview-box">
+                <!-- SVG fallback for the broken image icon seen in target design -->
+                <svg
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="#94a3b8"
+                  stroke-width="2"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <polyline points="21 15 16 10 5 21" />
+                </svg>
+              </div>
+              <div class="logo-input-group">
+                <label>Upload Business Logo</label>
+                <input type="file" id="business-logo" />
+              </div>
+            </div>
+
+            <!-- Form Row Columns Inputs Grid Layout -->
+            <div class="form-fields-grid">
+              <!-- Business Name -->
+              <div class="settings-field-group">
+                <label for="biz-name">Business Name</label>
+                <input type="text" id="biz-name" value="My Retail Store" />
+              </div>
+
+              <!-- Phone Number -->
+              <div class="settings-field-group">
+                <label for="biz-phone">Phone Number</label>
+                <input type="text" id="biz-phone" placeholder="" />
+              </div>
+
+              <!-- Email Address -->
+              <div class="settings-field-group">
+                <label for="biz-email">Email Address</label>
+                <input type="email" id="biz-email" placeholder="" />
+              </div>
+
+              <!-- Business Address -->
+              <div class="settings-field-group">
+                <label for="biz-address">Business Address</label>
+                <input type="text" id="biz-address" value="123 Main St" />
+              </div>
+            </div>
+
+            <!-- Full Width Content Text Area Element -->
+            <div class="settings-field-group full-width">
+              <label for="receipt-footer"
+                >Receipt Footer / Thank You Message</label
+              >
+              <textarea id="receipt-footer" rows="4">
+Thank you for shopping!</textarea
+              >
+            </div>
+
+            <!-- Full-Width Emerald Save Changes Button -->
+            <button type="submit" class="btn-save-settings">
+              Save Settings
+            </button>
+          </form>
+        </div>
+      </main>
     </div>
   </body>
 </html>

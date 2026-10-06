@@ -60,6 +60,28 @@
           </div>
           <div class="I-table2">
             <h4>Stock in/Add new stock</h4>
+
+            <form class="stock-form">
+              <div class="form-group">
+                <label for="Product-select">Select Product</label>
+                <select id="product-select">
+                  <option value="fourth-wing">fourth wing (Current: 95)</option>
+                  <option value="playstation-5">
+                    PlayStation 5 (Current: 3)
+                  </option>
+                  <option value="water">water (Current: 2)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="stock-qty">Quantity to Add</label>
+                <input type="number" id="stock-qty" min="1" step="1" />
+              </div>
+
+              <button type="submit" class="btn-update-stock">
+                Update Stock
+              </button>
+            </form>
           </div>
         </div>
       </main>

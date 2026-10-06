@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Good luck</title>
+    <title>Expenses - Business System</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div id="Container">
-      <!-- the beginning -->
+      <!-- Sidebar Area -->
       <aside id="sidebar">
         <div class="siderbar-H">
           <h2>Business system</h2>
@@ -22,7 +22,7 @@
             <li><a href="./customers.html">Customers</a></li>
             <li><a href="./possales.html">POS / Sales</a></li>
             <li><a href="./inventory.html">Inventory</a></li>
-            <li><a href="./exspenses.html">Expenses</a></li>
+            <li><a href="./exspenses.html" class="active">Expenses</a></li>
             <li><a href="./sales-report.html">Sales Report</a></li>
             <li><a href="./settings.html">Settings</a></li>
           </ul>
@@ -31,6 +31,88 @@
           <a href="aboutus.html">About us</a>
         </div>
       </aside>
+
+      <!-- Main Workspace (Using your custom layout structure) -->
+      <main id="main-content">
+        <!-- 1. Top Section Title Row Header -->
+        <div id="main-H">
+          <h3>Expenses</h3>
+          <button class="add-product">Add Expense</button>
+        </div>
+
+        <!-- 2. Monthly Expenses Numerical Tracker Panel Card -->
+        <div class="monthly-expenses-card">
+          <h4>Monthly Expenses</h4>
+          <div class="expense-value">₦0.00</div>
+        </div>
+
+        <!-- 3. Actions Data Table Panel Wrapper -->
+        <div id="P-table">
+          <table class="p-Tables">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2026-08-14</td>
+                <td>Rent</td>
+                <td>rent</td>
+                <td class="amount-negative">-₦1,000,000.00</td>
+                <td>
+                  <button class="btn-edit">Edit</button>
+                  <button class="btn-delete">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2026-08-13</td>
+                <td>Salary</td>
+                <td>pay day</td>
+                <td class="amount-negative">-₦25,000.00</td>
+                <td>
+                  <button class="btn-edit">Edit</button>
+                  <button class="btn-delete">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2026-08-11</td>
+                <td>Rent</td>
+                <td>yayy</td>
+                <td class="amount-negative">-₦400,000.00</td>
+                <td>
+                  <button class="btn-edit">Edit</button>
+                  <button class="btn-delete">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2026-08-11</td>
+                <td>Miscellaneous</td>
+                <td>yayy</td>
+                <td class="amount-negative">-₦100,000.00</td>
+                <td>
+                  <button class="btn-edit">Edit</button>
+                  <button class="btn-delete">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2026-07-15</td>
+                <td>Rent</td>
+                <td>rent</td>
+                <td class="amount-negative">-₦200,000.00</td>
+                <td>
+                  <button class="btn-edit">Edit</button>
+                  <button class="btn-delete">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
     </div>
   </body>
 </html>
